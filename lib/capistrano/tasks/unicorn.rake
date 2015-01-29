@@ -35,7 +35,7 @@ namespace :unicorn do
       execute :chmod, '+x', unicorn_initd_file
       #sudo 'update-rc.d', '-f', fetch(:unicorn_service), 'defaults'
       sudo 'chkconfig --add', fetch(:unicorn_service)
-      sudo 'ckhconfig', fetch(:unicorn_service), 'on'
+      sudo 'chkconfig', fetch(:unicorn_service), 'on'
     end
   end
 
